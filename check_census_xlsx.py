@@ -3,6 +3,9 @@
 # Given Excel files in _census_ca/
 # Check if all of them are in same format
 
+import openpyxl # require version >= 2.3.0
+assert(tuple(int(x) for x in openpyxl.__version__.split('.')) >= (2,3))
+
 from openpyxl import load_workbook
 import os
 
